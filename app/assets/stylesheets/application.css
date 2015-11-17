@@ -13,3 +13,23 @@
  *= require_tree .
  *= require_self
  */
+
+/* reset */
+html, body, div, ul, li {
+  margin: 0;
+  padding: 0;
+  border: none;
+
+  font: inherit;
+  color: inherit;
+
+  background: transparent
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  font-family: sans-serif;
+}
