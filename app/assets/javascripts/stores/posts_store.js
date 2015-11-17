@@ -2,13 +2,8 @@
   var _posts = [];
   var CHANGE_EVENT = "change";
 
-  var _updatePost = function(newPost) {
-    var oldPost = PostsStore.findPostById(newPost.id);
-    if (oldPost) {
-      _posts.splice(_posts.indexOf(oldPost), 1);
-    }
-
-    _posts.push(newPost);
+  var _addPost = function(newPost) {
+    _posts.unshift(newPost);
   };
 
   root.PostsStore = $.extend({}, EventEmitter.prototype, {
@@ -32,7 +27,7 @@
         PostsStore.emit(CHANGE_EVENT);
         break;
       case PostConstants.RECEIVE_POST:
-        _updatePost(payload.post);
+        _addPost(payload.post);
         PostsStore.emit(CHANGE_EVENT);
         break;
       }

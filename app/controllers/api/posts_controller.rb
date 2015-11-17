@@ -1,7 +1,7 @@
 class Api::PostsController < ApplicationController
 
   def index
-    @posts = Post.all
+    @posts = Post.order(created_at: :desc).all
   end
 
   def create
@@ -16,6 +16,6 @@ class Api::PostsController < ApplicationController
   private
 
     def post_params
-      params.require(:post).permit(:title)
+      params.require(:post).permit(:title, :image)
     end
 end

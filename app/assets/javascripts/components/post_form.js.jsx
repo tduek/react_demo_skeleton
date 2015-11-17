@@ -1,7 +1,7 @@
 (function(root) {
   root.PostForm = React.createClass({
     getInitialState: function() {
-      return { title: "", image: null };
+      return { title: "", imageUrl: "", imageFile: null };
     },
 
     render: function() {
@@ -14,8 +14,10 @@
             </label>
 
             <input type="file" onChange={this.changeFile} value={this.state.image} />
+
+            <button>Submit</button>
           </form>
-          <img className="preview-image" ref="preview" src="" />
+          <img className="preview-image" ref="preview" src={this.state.imageUrl} />
         </div>
       );
     },
@@ -30,7 +32,7 @@
       var that = this;
 
       reader.onloadend = function() {
-        that.updatePreview(reader.result);
+        that.setState({ imageUrl: reader.result, imageFile: file });
       }
 
       if (file) {
@@ -40,13 +42,21 @@
       }
     },
 
-    updatePreview: function(url) {
-      var preview = this.refs.preview.getDOMNode();
-      preview.src = url;
-    },
-
     handleSubmit: function(e) {
       e.preventDefault();
+
+      var title = this.state.title;
+      var file = this.state.imageFile;
+
+      var formData = new FormData();
+      formData.append("post[title]", title);
+      formData.append("post[image]", file);
+
+      ApiUtil.createPost(formData, this.resetForm);
+    },
+
+    resetForm: function() {
+      this.setState({ title: "", imageUrl: "", imageFile: null });
     }
   });
 })(this);
