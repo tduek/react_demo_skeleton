@@ -15,13 +15,16 @@
 
     render: function() {
       return (
-        <ul className="posts-index">
-          {
-            this.state.posts.map(function(post) {
-              return <PostIndexItem key={post.id} post={post} />
-            })
-          }
-        </ul>
+        <div>
+          <h1 className="title">Posts</h1>
+          <ul className="posts-index">
+            {
+              this.state.posts.map(function(post) {
+                return <PostIndexItem key={post.id} post={post} />
+              })
+            }
+          </ul>
+        </div>
       )
     },
 

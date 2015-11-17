@@ -15,7 +15,7 @@
  */
 
 /* reset */
-html, body, div, ul, li {
+html, body, div, h1, ul, li {
   margin: 0;
   padding: 0;
   border: none;
@@ -32,4 +32,19 @@ ul {
 
 body {
   font-family: sans-serif;
+}
+
+h1.title {
+  margin: 10px 0;
+  font-size: 26px;
+  font-weight: bold;
+  text-align: center;
+}
+
+ul.posts-index {
+  padding: 10px;
+}
+
+ul.posts-index > li {
+  margin: 10px 0;
 }
