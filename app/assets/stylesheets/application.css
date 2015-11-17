@@ -34,6 +34,12 @@ body {
   font-family: sans-serif;
 }
 
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 h1.title {
   margin: 10px 0;
   font-size: 26px;
@@ -47,4 +53,8 @@ ul.posts-index {
 
 ul.posts-index > li {
   margin: 10px 0;
+}
+
+img.post-image {
+  width: 50px;
 }
