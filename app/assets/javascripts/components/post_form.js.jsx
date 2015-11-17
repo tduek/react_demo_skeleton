@@ -27,36 +27,13 @@
     },
 
     changeFile: function(e) {
-      var reader = new FileReader();
-      var file = e.currentTarget.files[0];
-      var that = this;
-
-      reader.onloadend = function() {
-        that.setState({ imageUrl: reader.result, imageFile: file });
-      }
-
-      if (file) {
-        reader.readAsDataURL(file);
-      } else {
-        that.updatePreview("");
-      }
     },
 
     handleSubmit: function(e) {
       e.preventDefault();
-
-      var title = this.state.title;
-      var file = this.state.imageFile;
-
-      var formData = new FormData();
-      formData.append("post[title]", title);
-      formData.append("post[image]", file);
-
-      ApiUtil.createPost(formData, this.resetForm);
     },
 
     resetForm: function() {
-      this.setState({ title: "", imageUrl: "", imageFile: null });
     }
   });
 })(this);
