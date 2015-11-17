@@ -15,10 +15,10 @@
  */
 
 /* reset */
-html, body, div, h1, ul, li {
+html, body, div, h1, h2, ul, li {
   margin: 0;
   padding: 0;
-  border: none;
+  border: 0;
 
   font: inherit;
   color: inherit;
@@ -47,6 +47,12 @@ h1.title {
   text-align: center;
 }
 
+h2 {
+  margin: 10px 0;
+  font-size: 20px;
+  font-weight: bold;
+}
+
 ul.posts-index {
   padding: 10px;
 }
@@ -55,6 +61,6 @@ ul.posts-index > li {
   margin: 10px 0;
 }
 
-img.post-image {
+img.post-image, img.preview-image {
   width: 50px;
 }

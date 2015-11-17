@@ -16,6 +16,7 @@
     render: function() {
       return (
         <div>
+          <PostForm />
           <h1 className="title">Posts</h1>
           <ul className="posts-index">
             {
