@@ -13,6 +13,8 @@ gem 'pry-rails'
 gem 'react-rails', '~> 1.3.0'
 gem 'flux-rails-assets', '~> 2.1.0'
 
+gem 'paperclip'
+
 group :development, :test do
   gem 'byebug'
   gem 'web-console', '~> 2.0'
