@@ -14,6 +14,7 @@ gem 'react-rails', '~> 1.3.0'
 gem 'flux-rails-assets', '~> 2.1.0'
 
 gem 'paperclip'
+gem 'aws-sdk', '~> 1.6'
 
 group :development, :test do
   gem 'byebug'
