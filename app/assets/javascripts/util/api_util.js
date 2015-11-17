@@ -5,7 +5,7 @@ var ApiUtil = {
       type: 'GET',
       dataType: 'json',
       success: function(posts) {
-        console.log(posts);
+        PostActions.receivePosts(posts);
       }
     });
   },
@@ -16,7 +16,7 @@ var ApiUtil = {
       type: 'GET',
       dataType: 'json',
       success: function(post) {
-        console.log(post);
+        PostActions.receivePost(post);
       }
     });
   }
