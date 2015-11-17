@@ -15,6 +15,7 @@ gem 'flux-rails-assets', '~> 2.1.0'
 
 gem 'paperclip'
 gem 'aws-sdk', '~> 1.6'
+gem 'figaro'
 
 group :development, :test do
   gem 'byebug'
