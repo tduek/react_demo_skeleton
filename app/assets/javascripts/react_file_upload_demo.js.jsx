@@ -1,6 +1,6 @@
 $(function() {
   React.render(
-    <div></div>,
+    <PostsIndex />,
     document.getElementById('content')
   );
 });
