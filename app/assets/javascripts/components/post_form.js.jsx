@@ -17,7 +17,7 @@
 
             <button>Submit</button>
           </form>
-          <img className="preview-image" ref="preview" src={this.state.imageUrl} />
+          <img className="preview-image" src={this.state.imageUrl} />
         </div>
       );
     },
