@@ -1,5 +1,8 @@
 (function(root) {
   root.UsersIndex = React.createClass({
+    
+    mixins: [ReactRouter.History],
+    
     getInitialState: function() {
       return { users: UsersStore.all() };
     },

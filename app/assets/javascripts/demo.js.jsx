@@ -3,12 +3,14 @@ window.Demo = {
   
   initialize: function () {
     var Router = ReactRouter.Router,
-        Route = ReactRouter.Route;
+        Route = ReactRouter.Route,
+        IndexRoute = ReactRouter.IndexRoute;
     
     React.render(
       <Router>
         <Route path="/" component={ App }>
-          <Route path="users" component={ UsersIndex } />
+          <IndexRoute component={ UsersIndex } />
+          <Route path="login" component={ SessionForm }/>
           <Route path="users/:id" component={ UserShow } />
           <Route path="posts" component={ PostsIndex } />
         </Route>

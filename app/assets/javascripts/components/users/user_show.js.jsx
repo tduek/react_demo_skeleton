@@ -1,5 +1,7 @@
 (function(root) {
   root.UserShow = React.createClass({
+    mixins: [ReactRouter.History],
+    
     getInitialState: function() {
       return this.getStateFromStore();
     },

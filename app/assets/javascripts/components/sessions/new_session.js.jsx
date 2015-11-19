@@ -1,19 +1,24 @@
 (function(root) {
-  root.UserForm = React.createClass({
+  root.SessionForm = React.createClass({
     mixins: [ReactRouter.History],
 
     submit: function (e) {
       e.preventDefault();
       
-      debugger;
+      var credentials = $(e.currentTarget).serializeJSON();
+      SessionsApiUtil.login(credentials, function () {
+        this.history.pushState(null, "/users");
+      }.bind(this));
     },
+    
+    
 
     render: function() {
       
       return (
         <form onSubmit={ this.submit }>
           
-          <h1>Sign Up!</h1>
+          <h1>Logn In!</h1>
           
           <label>
             Email
@@ -25,7 +30,7 @@
             <input type="password" name="password" />
           </label>
   
-          <button>Join!</button>
+          <button>Log In!</button>
         </form>
       );
     },
