@@ -1,7 +1,7 @@
 class Api::SessionsController < ApplicationController
 
   def show
-    sleep 2
+    sleep 2 # simulate latency
     
     unless current_user
       render json: {}
