@@ -1,0 +1,15 @@
+<h1>Log'n In</h1>
+
+<form action="<%= session_url %>" method="POST">
+  
+  <input type="hidden" 
+    name="authenticity_token" 
+    value="<%= form_authenticity_token %>">
+    
+  <input type="text" name="email" value="<%= params[:email] %>">
+  
+  <input type="password" name="password">
+  
+  <button>Log In!</button>
+
+</form>

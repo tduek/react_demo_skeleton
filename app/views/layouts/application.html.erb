@@ -8,6 +8,20 @@
 </head>
 <body>
 
+<% if current_user %>
+  Logged in as <%= current_user.email %>
+  <%= button_to "Log out", session_url, method: "DELETE" %>
+<% else %>
+  <a href="<%= new_session_url %>">Log in</a>
+<% end %>
+
+<% flash.each do |msg_type, msg| %>
+  <p><%= msg_type %>: <%= msg %></p>
+<% end %>
+
+<p>Everything above this rendered by Rails in application layout.</p>
+<hr>
+
 <%= yield %>
 
 </body>
