@@ -6,7 +6,7 @@
 
     componentDidMount: function() {
       UsersStore.addChangeHandler(this._onChange);
-      ApiUtil.fetchUsers();
+      UsersApiUtil.fetchUsers();
     },
 
     componentWillUnmount: function() {

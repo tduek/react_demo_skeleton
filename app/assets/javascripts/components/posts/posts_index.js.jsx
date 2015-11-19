@@ -6,7 +6,7 @@
 
     componentDidMount: function() {
       PostsStore.addChangeHandler(this._onChange);
-      ApiUtil.fetchPosts();
+      PostsApiUtil.fetchPosts();
     },
 
     componentWillUnmount: function() {
