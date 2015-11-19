@@ -1,6 +1,7 @@
-(function(root) {
+(function (root) {
   root.PostForm = React.createClass({
-    getInitialState: function() {
+    
+    getInitialState: function () {
       return { title: "", imageUrl: "", imageFile: null };
     },
 
@@ -10,7 +11,7 @@
           <h2>New Post</h2>
           <form onSubmit={this.handleSubmit}>
             <label>Title
-              <input type="text" onChange={this.changeTitle} value={this.state.title} />
+              <input type="text" onChange={this.changeTitle} />
             </label>
 
             <input type="file" onChange={this.changeFile} />
@@ -22,18 +23,18 @@
       );
     },
 
-    changeTitle: function(e) {
+    changeTitle: function (e) {
       this.setState({ title: e.currentTarget.value });
     },
 
-    changeFile: function(e) {
+    changeFile: function (e) {
     },
 
-    handleSubmit: function(e) {
+    handleSubmit: function (e) {
       e.preventDefault();
     },
 
-    resetForm: function() {
+    resetForm: function () {
     }
   });
 })(this);

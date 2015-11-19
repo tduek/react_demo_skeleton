@@ -1,35 +1,33 @@
 var ApiUtil = {
-  fetchPosts: function() {
+  fetchPosts: function () {
     $.ajax({
       url: '/api/posts',
       type: 'GET',
       dataType: 'json',
-      success: function(posts) {
+      success: function (posts) {
         PostActions.receivePosts(posts);
       }
     });
   },
 
-  fetchPost: function(id) {
+  fetchPost: function (id) {
     $.ajax({
       url: '/api/posts/' + id,
       type: 'GET',
       dataType: 'json',
-      success: function(post) {
+      success: function (post) {
         PostActions.receivePost(post);
       }
     });
   },
 
-  createPost: function(formData, callback) {
+  createPost: function (attrs, callback) {
     $.ajax({
       url: '/api/posts',
       type: 'POST',
-      processData: false,
-      contentType: false,
       dataType: 'json',
-      data: formData,
-      success: function(post) {
+      data: attrs,
+      success: function (post) {
         PostActions.receivePost(post);
         callback && callback();
       }
