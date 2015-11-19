@@ -1,4 +1,4 @@
-var ApiUtil = {
+var PostsApiUtil = {
   fetchPosts: function () {
     $.ajax({
       url: '/api/posts',
