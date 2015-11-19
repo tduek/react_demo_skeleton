@@ -10,9 +10,10 @@
 
 <% if current_user %>
   Logged in as <%= current_user.email %>
-  <%= button_to "Log out", session_url, method: "DELETE" %>
+  <%= button_to "Log out", session_url, method: :delete %>
 <% else %>
-  <a href="<%= new_session_url %>">Log in</a>
+  <a href="<%= new_session_url %>">Log in</a> ||
+  <a href="<%= new_user_url %>">Create an account</a>
 <% end %>
 
 <% flash.each do |msg_type, msg| %>

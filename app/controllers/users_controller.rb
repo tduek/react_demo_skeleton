@@ -1,5 +1,9 @@
 class UsersController < ApplicationController
 
+  def new
+    @user = User.new
+  end
+
   def index
     @users = User.all
     render :index
@@ -17,13 +21,14 @@ class UsersController < ApplicationController
       sign_in!(@user)
       render :show
     else
-      render json: @user.errors.full_messages, status: :unprocessable_entity
+      flash.now[:errors] = @user.errors.full_messages
+      render :new, status: :unprocessable_entity
     end
   end
 
   protected
 
   def user_params
-    self.params.require(:user).permit(:first_name, :last_name, :email, :password)
+    self.params.require(:user).permit(:email, :password)
   end
 end

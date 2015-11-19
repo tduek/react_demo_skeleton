@@ -6,9 +6,15 @@
     name="authenticity_token" 
     value="<%= form_authenticity_token %>">
     
-  <input type="text" name="email" value="<%= params[:email] %>">
-  
-  <input type="password" name="password">
+  <label>
+    Email
+    <input type="text" name="email" value="<%= params[:email] %>">
+  </label>
+    
+  <label>
+    Password
+    <input type="password" name="password">
+  </label>
   
   <button>Log In!</button>
 

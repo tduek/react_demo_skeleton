@@ -1,0 +1,18 @@
+<p>Rendered in Rails users/index</p>
+
+<h1>Users Index</h1>
+
+<% if @users.empty? %>
+  No users to show :(
+<% else %>
+
+  <ul>
+  <% @users.each do |user| %>
+    <li>
+      <a href="<%= user_url(user) %>">
+        <%= user.email %>
+      </a>
+    </li>
+  <% end %>
+  </ul>
+<% end %>
