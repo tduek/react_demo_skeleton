@@ -9,5 +9,5 @@ Take a look at:
 - [`Header component`](./app/assets/javascripts/components/header.js.jsx)
 - [`SessionsApiUtil`](./app/assets/javascripts/util/sessions_api_util.js)
 - [`SessionForm`](./app/assets/javascripts/components/sessions/new_session.js.jsx)
-- [`Api::SessionsController`](./app/assets/javascripts/controllers/api/sessions_controller.rb)
+- [`Api::SessionsController`](./app/controllers/api/sessions_controller.rb)
 
