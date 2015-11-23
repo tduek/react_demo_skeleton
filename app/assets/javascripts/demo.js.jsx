@@ -10,7 +10,6 @@ window.Demo = {
       <Router>
         <Route path="/" component={ App }>
           <IndexRoute component={ UsersIndex } />
-          <Route path="login" component={ SessionForm }/>
           <Route path="users/:id" component={ UserShow } />
           <Route path="posts" component={ PostsIndex } />
         </Route>
