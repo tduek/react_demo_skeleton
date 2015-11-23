@@ -8,7 +8,6 @@ Take a look at:
 - [`SearchResultsStore`](./app/assets/javascripts/stores/search_results_store.js)
 - [`Search component`](./app/assets/javascripts/components/search_results.js.jsx)
 - [`SearchApiUtil`](./app/assets/javascripts/util/search_api_util.js)
-- [`SessionForm`](./app/assets/javascripts/components/sessions/new_session.js.jsx)
 - [`Api::SearchController`](./app/controllers/api/search_controller.rb)
 - [`api/search/index.json.jbuilder`](./app/views/api/search/index.json.jbuilder)
 
