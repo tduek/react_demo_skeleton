@@ -1,13 +1,17 @@
-# React Auth Demo
+# Search Demo
 
 Contains Users and Posts. User auth all in regular Rails.
 
 Take a look at:
 
-- [`CurrentUserStore`](./app/assets/javascripts/stores/current_user_store.js)
-- [`App component`](./app/assets/javascripts/components/app.js.jsx)
-- [`Header component`](./app/assets/javascripts/components/header.js.jsx)
-- [`SessionsApiUtil`](./app/assets/javascripts/util/sessions_api_util.js)
+- [React routes](./app/assets/javascripts/demo.js.jsx)
+- [`SearchResultsStore`](./app/assets/javascripts/stores/search_results_store.js)
+- [`Search component`](./app/assets/javascripts/components/search_results.js.jsx)
+- [`SearchApiUtil`](./app/assets/javascripts/util/search_api_util.js)
 - [`SessionForm`](./app/assets/javascripts/components/sessions/new_session.js.jsx)
-- [`Api::SessionsController`](./app/controllers/api/sessions_controller.rb)
+- [`Api::SearchController`](./app/controllers/api/search_controller.rb)
+- [`api/search/index.json.jbuilder`](./app/views/api/search/index.json.jbuilder)
 
+### Docs
+- [PgSearch](https://github.com/Casecommons/pg_search) (full text search) 
+- [Kaminari](https://github.com/amatsuda/kaminari) (pagination) 

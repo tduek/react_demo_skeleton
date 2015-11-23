@@ -1,6 +1,9 @@
 class User < ActiveRecord::Base
   
   attr_reader :password
+  
+  include PgSearch
+  multisearchable :against => :email
 
   validates :email, :password_digest, :session_token, presence: true
   validates :password, length: { minimum: 6, allow_nil: true }

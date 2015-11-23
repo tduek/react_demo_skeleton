@@ -12,6 +12,7 @@ window.Demo = {
           <IndexRoute component={ UsersIndex } />
           <Route path="users/:id" component={ UserShow } />
           <Route path="posts" component={ PostsIndex } />
+          <Route path="search" component={ Search } />
         </Route>
       
         <UsersIndex />

@@ -14,6 +14,9 @@ gem 'bcrypt-ruby', require: 'bcrypt'
 gem 'react-rails', '~> 1.3.0'
 gem 'flux-rails-assets', '~> 2.1.0'
 
+gem 'pg_search'
+gem 'kaminari'
+
 
 group :development, :test do
   gem 'byebug'

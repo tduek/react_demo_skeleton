@@ -19,11 +19,7 @@
     render: function() {
       var users = this.state.users.map(function (user) {
         return (
-          <li key={ user.id }>
-            <a href={ "#/users/" + user.id }>
-              { user.email }
-            </a>
-          </li>
+          <UserIndexItem key={ user.id } user={ user } />
         );
       });
       
