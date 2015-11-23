@@ -2,40 +2,15 @@
   root.Header = React.createClass({
 
     getInitialState: function () {
-      return {
-        currentUser: CurrentUserStore.currentUser()
-      };
-    },
-
-    componentDidMount: function () {
-      CurrentUserStore.addChangeHandler(this._onChange)
-    },
-
-    _onChange: function () {
-      this.setState({currentUser: CurrentUserStore.currentUser()});
-    },
-    
-    logout: function () {
-      SessionsApiUtil.logout();
+      return {};
     },
 
     render: function() {
-      if (CurrentUserStore.isLoggedIn()) {
-        return (
-          <div>
-            Logged in as
-            { this.state.currentUser.email }
-            <button onClick={ this.logout }>LOG OUT</button>
-          </div>
-        );
-      } else {
-        return ( 
-          <div>
-            <a href="#/login">Login</a>
-          </div>
-        );
-      }
-      
+      return ( 
+        <div>
+          <h1>LOGO (in header.js.jsx)</h1>
+        </div>
+      );
     },
 
   })
