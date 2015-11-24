@@ -7,7 +7,7 @@
       
       var credentials = $(e.currentTarget).serializeJSON();
       SessionsApiUtil.login(credentials, function () {
-        this.history.pushState(null, "/users");
+        this.history.pushState(null, "/posts");
       }.bind(this));
     },
     
@@ -19,6 +19,8 @@
         <form onSubmit={ this.submit }>
           
           <h1>Logn In!</h1>
+        
+          <a href="/auth/facebook">LOG IN WITH THE FACEBOOKS</a>
           
           <label>
             Email

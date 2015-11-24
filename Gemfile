@@ -14,6 +14,14 @@ gem 'bcrypt-ruby', require: 'bcrypt'
 gem 'react-rails', '~> 1.3.0'
 gem 'flux-rails-assets', '~> 2.1.0'
 
+gem 'omniauth-facebook'
+gem 'figaro'
+
+group :development do
+  gem 'better_errors'
+  gem 'binding_of_caller'
+end
+
 
 group :development, :test do
   gem 'byebug'

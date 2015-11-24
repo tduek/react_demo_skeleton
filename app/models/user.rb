@@ -2,7 +2,7 @@ class User < ActiveRecord::Base
   
   attr_reader :password
 
-  validates :email, :password_digest, :session_token, presence: true
+  validates :password_digest, :session_token, presence: true
   validates :password, length: { minimum: 6, allow_nil: true }
   
   before_validation :ensure_session_token
@@ -11,6 +11,21 @@ class User < ActiveRecord::Base
     user = User.find_by(email: email)
     return nil if user.nil?
     user.is_password?(password) ? user : nil
+  end
+  
+  def self.find_or_create_by_auth_hash(auth_hash)
+    provider = auth_hash[:provider]
+    uid = auth_hash[:uid]
+    
+    user = User.find_by(provider: provider, uid: uid)
+    return user if user
+    
+    User.create(
+      email: auth_hash[:info][:name], 
+      provider: provider, 
+      uid: uid, 
+      password: SecureRandom.urlsafe_base64
+    )
   end
 
   def password=(password)
