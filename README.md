@@ -22,4 +22,5 @@ Contains Users and Posts. User auth all in regular Rails.
 ##### Links:
 
 - [Facebook Developers](https://developers.facebook.com)
+  - Don't forget to add the "Valid OAuth Redirect URIs" in Settings > Advanced
 - [Omniauth Facebook](https://github.com/mkdynamic/omniauth-facebook)
